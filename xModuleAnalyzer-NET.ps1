@@ -130,7 +130,7 @@ If (!(Test-Path -Path "$fsaJarPath")) {
 	
 	Log "Downloading WhiteSource Unified Agent..."
 	try {
-		Invoke-WebRequest -Uri "https://unified-agent.s3.amazonaws.com/wss-unified-agent.jar" -OutFile "$fsaJarPath"
+		Invoke-WebRequest -Uri "https://github.com/whitesource/unified-agent-distribution/releases/latest/download/wss-unified-agent.jar" -OutFile "$fsaJarPath"
 	} catch {
 		Terminate "Download Failed: $_"
 	}
